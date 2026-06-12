@@ -591,6 +591,183 @@ body {
     transform: scale(1.5);
 }
 
+.phase3 {
+    height: 100svh;
+    width: 100%;
+    font-family: monospace;
+    /* background-color: #956afa; */
+    margin-top: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 100px; */
+    position: relative;
+}
+
+.logistics {
+    height: 600px;
+    width: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    text-align: left;
+    font-size: 1rem;
+    /* background-color: ; */
+    border-radius: 50px;
+}
+
+.logistics h1,
+.logistics2 h1 {
+    color: #956afa;
+}
+
+.logistics2 {
+    height: 600px;
+    width: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    text-align: right;
+    font-size: 1rem;
+    /* background-color: ; */
+    border-radius: 50px;
+}
+
+
+
+
+#userform {
+
+    height: 650px;
+    width: 400px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #956afa;
+}
+
+fieldset {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px;
+    color: orange;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+input {
+    height: 30px;
+    padding: 10px;
+    background-color: #956afa;
+    color: #fefafa;
+}
+
+input::placeholder {
+    color: white;
+}
+
+select {
+    background-color: white;
+    color: black;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.card-generator {
+    height: 650px;
+    width: 400px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+#userform,
+.card,
+.loading {
+    position: absolute;
+    inset: 0;
+}
+
+#userform button {
+    padding: 8px;
+    font-size: 1.5rem;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #956afa;
+    color: white;
+    margin-left: 7.5rem;
+}
+
+.card {
+    height: 650px;
+    width: 400px;
+    padding: 10px;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    display: none;
+}
+
+.card img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.card button {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    background-color: #956afa;
+    font-family: monospace;
+    color: white;
+    border: none;
+}
+
+.card p:nth-child(6) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card p:nth-child(6) span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: limegreen;
+    display: inline-block;
+}
+
+.loading {
+    height: 650px;
+    width: 400px;
+    background-color: #956afa;
+    color: azure;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 
 @media (max-width: 500px) {
     .hero {
@@ -666,6 +843,46 @@ body {
 
     .hero>img {
         object-position: center;
+    }
+
+    .phase3 {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .logistics,
+    .logistics2,
+    .card-generator {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .logistics,
+    .logistics2 {
+        height: auto;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    #userform,
+    .card,
+    .loading {
+        width: 100%;
+    }
+
+    .logistics h1,
+    .logistics2 h1 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .logistics p,
+    .logistics2 p {
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
+        /* line-height: 1.6; */
     }
 
 
