@@ -7,6 +7,7 @@
 body {
     min-height: 400svh;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .hero {
@@ -772,7 +773,7 @@ select {
     height: 80svh;
     width: 100%;
     /* background-color: #956afa; */
-    margin-top: 5rem;
+    margin-top: 9rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -792,8 +793,8 @@ select {
 }
 
 .serve-con>h1 {
-    font-family: monospace;
-    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-style: italic; */
     font-size: 3.2rem;
     color: #956afa;
     text-align: center;
@@ -935,7 +936,7 @@ select {
     .logistics2,
     .card-generator {
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
     }
 
     .logistics,
@@ -968,32 +969,40 @@ select {
         justify-content: center;
     }
 
-    .serve-con{
-        width:100%;
-        max-width:450px;
-        margin-left: 50px;
+    .serve-con {
+        width: 100%;
+        max-width: 500px;
+        margin-left: 2px;
+        height: 80svh;
     }
 
     .serve1 {
-        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-        height: 57svh;
+        /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
+        clip-path: polygon(0 0, 28% 13%, 49% 0, 73% 0, 100% 0, 100% 60%, 67% 69%, 61% 86%, 30% 74%, 30% 73%, 23% 53%, 0 42%);
+        height: 85svh;
         width: 100%;
     }
 
     .serve1 .elem {
-        font-size: 1rem;
+        height: 90px;
+        font-size: .8rem;
     }
 
-    .elem:nth-child(2) h1,
+    .elem:nth-child(2) h1 {
+        padding-left: 5px;
+    }
+
     .elem:nth-child(3) h1 {
+        padding-left: 40px;
+    }
+
+    .elem:nth-child(1) h1 {
+        padding-left: 120px;
+    }
+
+    .elem:nth-child(4) h1 {
         padding-left: 70px;
     }
-
-    .elem:nth-child(1) h1,
-    .elem:nth-child(4) h1 {
-        padding-left: 10px;
-    }
-
 
 }
 
