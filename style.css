@@ -768,6 +768,83 @@ select {
     font-size: 2rem;
 }
 
+.services {
+    height: 80svh;
+    width: 100%;
+    /* background-color: #956afa; */
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 1rem;
+    /* clip-path: polygon(0 1%, 65% 0, 100% 100%, 32% 100%); */
+}
+
+.serve-con {
+    border-radius: 100px;
+    height: 600px;
+    width: 1000px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* background-color: #111; */
+}
+
+.serve-con>h1 {
+    font-family: monospace;
+    font-style: italic;
+    font-size: 3.2rem;
+    color: #956afa;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+.serve1 {
+    height: 80svh;
+    width: clamp(300px, 90vw, 850px);
+    background-color: #111;
+    clip-path: polygon(0 0, 22% 13%, 50% 0, 100% 0, 100% 39%, 100% 59%, 78% 74%, 77% 100%, 40% 87%, 31% 57%, 0 35%, 0 35%);
+}
+
+.serve1 .elem {
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    padding-left: 8vw;
+    object-fit: cover;
+    font-family: monospace;
+    position: relative;
+    overflow: visible;
+    /* font-size: 2vw; */
+}
+
+.serve1 .elem h1 {
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+
+.serve1 .elem:nth-child(1) h1,
+.serve1 .elem:nth-child(3) h1 {
+    color: white;
+}
+
+.serve1 .elem img {
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: all linear 0.3s;
+}
+
 
 @media (max-width: 500px) {
     .hero {
@@ -883,6 +960,38 @@ select {
     .logistics2 p {
         font-size: clamp(0.9rem, 1vw, 1.1rem);
         /* line-height: 1.6; */
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .serve-con{
+        width:100%;
+        max-width:450px;
+        margin-left: 50px;
+    }
+
+    .serve1 {
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        height: 57svh;
+        width: 100%;
+    }
+
+    .serve1 .elem {
+        font-size: 1rem;
+    }
+
+    .elem:nth-child(2) h1,
+    .elem:nth-child(3) h1 {
+        padding-left: 70px;
+    }
+
+    .elem:nth-child(1) h1,
+    .elem:nth-child(4) h1 {
+        padding-left: 10px;
     }
 
 

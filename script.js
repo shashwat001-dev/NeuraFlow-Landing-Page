@@ -271,6 +271,27 @@ gsap.from('.logistics2 h1, .logistics2 p',
         }
     })
 
+var elem = document.querySelectorAll(".elem")
+
+elem.forEach((val) => {
+
+    const image = val.querySelector("img")
+
+    val.addEventListener("mouseenter", () => {
+        image.style.opacity = 1
+    })
+    val.addEventListener("mouseleave", () => {
+        image.style.opacity = 0
+    })
+    val.addEventListener("mousemove", (dets) => {
+        const rect = val.getBoundingClientRect()
+        image.style.left = `${dets.clientX - rect.left}px`
+        image.style.top = `${dets.clientY - rect.top}px`
+    })
+})
+
+
+
 
 
 
