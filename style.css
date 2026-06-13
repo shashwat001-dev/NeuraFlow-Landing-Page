@@ -709,7 +709,7 @@ select {
     border: none;
     background-color: #956afa;
     color: white;
-    margin-left: 7.5rem;
+    /* margin-left: 7.5rem; */
 }
 
 .card {
