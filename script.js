@@ -195,6 +195,7 @@ form.addEventListener("submit", (e) => {
     form.style.display = "none"
     loader.style.display = "flex"
 
+
     let count = 0
 
     let interval = setInterval(() => {
@@ -289,6 +290,74 @@ elem.forEach((val) => {
         image.style.top = `${dets.clientY - rect.top}px`
     })
 })
+
+function addShuffleOnHoverText(el, options = {}) {
+    const letters = options.letters ?? "!@#$%^&*()_+-=[]{}<>?/|";
+    const tickMs = options.tickMs ?? 30;
+
+    const original = (el.textContent ?? "").toString();
+    if (!original.trim()) return;
+
+    let intervalId = null;
+
+    function randomChar() {
+        return letters[Math.floor(Math.random() * letters.length)];
+    }
+
+    function shuffledVersion(text) {
+        return text
+            .split("")
+            .map((ch) => (ch === " " ? " " : randomChar()))
+            .join("");
+    }
+
+    el.addEventListener("mouseenter", () => {
+        clearInterval(intervalId);
+        intervalId = setInterval(() => {
+            el.textContent = shuffledVersion(original);
+        }, tickMs);
+    });
+
+    el.addEventListener("mouseleave", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        el.textContent = original;
+    });
+}
+
+
+const strings = [
+    "0123456789",
+    "@#$%^&*()!",
+    "0123456789",
+    "@#$%^&*()!"
+];
+
+document.querySelectorAll('.elem h1').forEach((h1, index) => {
+    addShuffleOnHoverText(h1, {
+        letters: strings[index]
+    });
+});
+
+const paraString = [
+    "⍜⌇⋔⌰⟟☌⊑⌿⍀☊⋏⟒⎍⏃⏁⍀⋔⎎⌖◉☍⌬⌭⌮⌯⌰",
+    "⍜⌇⋔⌰⟟☌⊑⌿⍀☊⋏⟒⎍⏃⏁⍀⋔⎎⌖◉☍⌬⌭⌮⌯⌰",
+    "⍜⌇⋔⌰⟟☌⊑⌿⍀☊⋏⟒⎍⏃⏁⍀⋔⎎⌖◉☍⌬⌭⌮⌯⌰",
+    "⍜⌇⋔⌰⟟☌⊑⌿⍀☊⋏⟒⎍⏃⏁⍀⋔⎎⌖◉☍⌬⌭⌮⌯⌰"
+];
+
+document.querySelectorAll('.logistics p').forEach((p, index) => {
+    addShuffleOnHoverText(p, {
+        letters: paraString[index]
+    });
+});
+
+document.querySelectorAll('.logistics2 p').forEach((p, index) => {
+    addShuffleOnHoverText(p, {
+        letters: paraString[index]
+    });
+});
+
 
 
 

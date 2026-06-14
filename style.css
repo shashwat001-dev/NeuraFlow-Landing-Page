@@ -709,6 +709,7 @@ select {
     border: none;
     background-color: #956afa;
     color: white;
+    /* cursor: pointer; */
 }
 
 .card {
@@ -792,11 +793,13 @@ select {
 }
 
 .serve-con>h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: monospace;
+    font-weight: normal;
     /* font-style: italic; */
     font-size: 3.2rem;
     color: #956afa;
     text-align: center;
+    letter-spacing: -4px;
     /* text-decoration: underline; */
 }
 
